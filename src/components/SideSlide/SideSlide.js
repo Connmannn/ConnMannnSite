@@ -10,8 +10,10 @@ const sideSlide = props => {
     return (
     <nav className={slideClasses}>
         <ul>
-            <li><a href="/signup">Signup</a></li>
-            <li><a href="/login">Login</a></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/">Something</a></li>
+            <li><a href="/">Something</a></li>
+            <li><a href="/">Something</a></li>
         </ul>
     </nav>
     );
