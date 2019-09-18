@@ -1,7 +1,8 @@
 .App {
-  margin-top: 15px;
+  /* width: 100vw;
+  height: 100vh; */
+  background-color: #d0cbd6b7;
 }
 
-.App .navbar-brand {
-  font-weight: bold;
-}
+
+

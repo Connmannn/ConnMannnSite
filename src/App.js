@@ -1,10 +1,14 @@
-import React, { Component, Fragment } from "react";
-import "./App.css";
+import React, { Component } from "react";
 import Routes from "./Routes";
-import { Link, withRouter } from "react-router-dom";
-import { Nav, Navbar, NavItem } from "react-bootstrap";
-import { LinkContainer } from "react-router-bootstrap";
+import { withRouter } from "react-router-dom";
 import { Auth } from "aws-amplify";
+import Toolbar from './components/Toolbar/Toolbar';
+import SideSlide from './components/SideSlide/SideSlide';
+import Backdrop from './components/Backdrop/Backdrop';
+import Footer from './components/Footer/Footer';
+import Social from './components/SocialFollow/SocialFollow';
+
+import "./App.css";
 
 class App extends Component {
   constructor(props) {
@@ -12,8 +16,19 @@ class App extends Component {
   
     this.state = {
       isAuthenticated: false,
-      isAuthenticating: true
+      isAuthenticating: true,
+      sideSlideOpen: false
     };    
+  }
+
+  sideSlideToggleClickHandler = () => {
+    this.setState((prevState) => {
+      return {sideSlideOpen: !prevState.sideSlideOpen};
+    });
+  };
+
+  backdropClickHandler = () => {
+    this.setState({sideSlideOpen: false});
   }
   
   async componentDidMount() {
@@ -40,46 +55,34 @@ class App extends Component {
     this.userHasAuthenticated(false);
     this.props.history.push("/login");
   }
+
+
   
 
   render() {
+    let backdrop;
+
     const childProps = {
       isAuthenticated: this.state.isAuthenticated,
       userHasAuthenticated: this.userHasAuthenticated
     };
+
+    if (this.state.sideSlideOpen) {
+      backdrop = <Backdrop click={this.backdropClickHandler} />
+    }
   
     return (
-      !this.state.isAuthenticating &&
-      <div className="App container">
-        <Navbar fluid collapseOnSelect>
-          <Navbar.Header>
-            <Navbar.Brand>
-              <Link to="/">Scratch</Link>
-            </Navbar.Brand>
-            <Navbar.Toggle />
-          </Navbar.Header>
-          <Navbar.Collapse>
-            <Nav pullRight>
-              {this.state.isAuthenticated
-                ? <Fragment>
-                    <LinkContainer to="/settings">
-                      <NavItem>Settings</NavItem>
-                    </LinkContainer>
-                    <NavItem onClick={this.handleLogout}>Logout</NavItem>
-                  </Fragment>
-                : <Fragment>
-                    <LinkContainer to="/signup">
-                      <NavItem>Signup</NavItem>
-                    </LinkContainer>
-                    <LinkContainer to="/login">
-                      <NavItem>Login</NavItem>
-                    </LinkContainer>
-                  </Fragment>
-              }
-            </Nav>
-          </Navbar.Collapse>
-        </Navbar>
-        <Routes childProps={childProps} />
+      <div style={{height: '100%'}}>
+        <Toolbar sideSlideClickHandler={this.sideSlideToggleClickHandler}/>
+        <SideSlide show={this.state.sideSlideOpen}/>
+        {backdrop}
+        <main style={{marginTop: '56px'}}>
+          <div className="appContainer">
+            <Routes childProps={childProps} />
+          </div>
+        </main>
+        <Social />
+        {/* <Footer /> */}
       </div>
     );
   }   

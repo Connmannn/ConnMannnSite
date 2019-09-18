@@ -1,0 +1,15 @@
+.footer {
+    position: fixed;
+    text-decoration: none;
+    min-height: 50px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f2f2f7e3;
+  }
+
+  .footer__list ul {
+    display: flex;
+    align-items: center;
+
+  }
