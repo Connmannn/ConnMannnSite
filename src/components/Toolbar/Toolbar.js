@@ -14,8 +14,10 @@ const toolbar = props => (
             <div className="spacing" />
             <div className="toolbar__navigation-items">
                 <ul>
-                    <li><a href="/signup">Signup</a></li>
-                    <li><a href="/login">Login</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Something</a></li>
+                    <li><a href="/">Something</a></li>
+                    <li><a href="/">Something</a></li>
                 </ul>
             </div>
         </nav>
