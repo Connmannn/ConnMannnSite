@@ -17,7 +17,7 @@ export default function SocialFollow() {
       <a href="https://www.facebook.com/matthew.connaughton.5" target="_blank" className="social-follow__Facebook">
         <FontAwesomeIcon icon={faFacebook} size="2x" />
       </a>
-      <a href="mailto:matthew.t.connaughton@gmail.com" className="social-follow__Google">
+      <a href="mailto:matthew.t.connaughton@gmail.com" className="social-follow__Email">
         <FontAwesomeIcon icon={faEnvelope} size="2x" />
       </a>
     </div>
