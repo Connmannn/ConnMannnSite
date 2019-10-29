@@ -1,5 +1,6 @@
-.NotFound {
-    padding-top: 100px;
+.not-found {
+    margin: 1rem;
     text-align: center;
+    color: #98959d; 
   }
   

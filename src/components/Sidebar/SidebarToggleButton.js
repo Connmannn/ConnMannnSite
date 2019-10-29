@@ -1,13 +1,14 @@
 import React from 'react';
 
-import './SlideToggleButton.css';
+import './SidebarToggleButton.css';
 
-const slideToggleButton = props => (
+const sidebarToggleButton = props => (
     <button className="toggle-button" onClick={props.click}>
+        <div className="toggle-button__line" />
         <div className="toggle-button__line" />
         <div className="toggle-button__line" />
         <div className="toggle-button__line" />
     </button>
 );
 
-export default slideToggleButton;
+export default sidebarToggleButton;

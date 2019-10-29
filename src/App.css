@@ -1,8 +1,23 @@
-.App {
-  /* width: 100vw;
-  height: 100vh; */
-  background-color: #d0cbd6b7;
+.app {
+  height: 100vh;
+  width: auto;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+
 }
 
-
-
+.app__container {
+  background: inherit;
+  overflow:hidden;
+  position: relative;
+  /* min-height: 100%; */
+  z-index: 1;
+  padding-top: 1rem;
+  padding-bottom: 4.5rem;
+}

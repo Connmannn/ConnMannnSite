@@ -1,11 +1,11 @@
 .toolbar {
-    position: fixed;
+    position: sticky;
     top: 0;
-    left: 0;
-    width: 100%;
-    background:  #f2f2f7;
-    /* height: 48px; */
-    box-shadow: 0 0.1rem 0 0 #cfc8d8;
+    right: 0;
+    height:4rem;
+    width: auto;
+    background:  inherit;
+    z-index: 10;
 }
 
 .toolbar__navigation {

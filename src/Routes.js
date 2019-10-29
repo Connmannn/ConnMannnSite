@@ -2,9 +2,7 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import NotFound from "./containers/NotFound";
 import AppliedRoute from "./components/Routing/AppliedRoute";
-// import AuthenticatedRoute from "./components/Routing/AuthenticatedRoute";
-// import UnauthenticatedRoute from "./components/Routing/UnauthenticatedRoute";
-import Home from "./containers/Home"
+import Home from "./containers/Home/Home"
 
 export default ({ childProps }) =>
 <Switch>

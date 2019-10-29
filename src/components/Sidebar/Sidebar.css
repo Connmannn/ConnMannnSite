@@ -1,0 +1,68 @@
+/* Container needed for Edge.. Edge is re-inheritting full image 
+Set display on/off*/
+.sidebar__container {
+    background:inherit;
+    height: auto;
+    width: 70%;
+    z-index:5;
+    top: 0;
+    left: 0;
+    position:fixed;
+}
+
+.sidebar {
+    margin-top: 1rem;
+    height: auto;
+    background: inherit; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70%;
+    max-width: 200px;
+    z-index: 5;
+    transform: translateX(-105%);
+    transition: transform .5s ease-out ;
+    border-bottom: white;
+    border-right: white;
+    border-width: 0px 2px 2px 0px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 6px 1px rgba(255, 255, 255, 0.5);
+}
+
+.sidebar.open {
+    transform: translateX(-2%);
+}
+
+.sidebar ul {
+    overflow:hidden;
+    padding-inline-start: 0;
+    margin-inline-start: 0;
+    height: auto;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.sidebar li {
+    margin: 0.5rem 0rem 0rem 0rem;
+    background: inherit;
+}
+
+.sidebar a {
+    color: #98959d;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    color: orange;
+}
+
+@media (min-width: 769px) {
+    .sidebar{
+        display:none;
+    }
+}

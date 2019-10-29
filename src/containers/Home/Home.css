@@ -1,0 +1,26 @@
+.home {
+  height: 100%;
+}
+
+.home__lander {
+    height: inherit;
+    text-align: center;
+    width: 100%;
+  }
+  
+.home__lander h1 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  color: #8a8c9d;
+}
+
+.home__lander p {
+  font-weight:500;
+  color:#818BA6;
+  margin: 0 0 1%;
+}
+
+.home__lander div {
+  height: 100px;
+  margin-right: 1%;
+}
