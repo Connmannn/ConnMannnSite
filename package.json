@@ -7,7 +7,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.11.2",
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@fortawesome/react-fontawesome": "^0.1.7",
-    "aws-amplify": "^1.2.3",
+    "aws-amplify": "^6.16.2",
     "dotenv": "^8.2.0",
     "font-awesome": "^4.7.0",
     "lodash": "^4.17.15",
